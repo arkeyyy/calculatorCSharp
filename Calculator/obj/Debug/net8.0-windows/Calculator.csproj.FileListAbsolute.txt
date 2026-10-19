@@ -1,0 +1,69 @@
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.Form1.resources
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.csproj.GenerateResource.cache
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.AssemblyInfoInputs.cache
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.AssemblyInfo.cs
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Aldrin\source\repos\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.exe
+C:\Users\Aldrin\source\repos\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.deps.json
+C:\Users\Aldrin\source\repos\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.runtimeconfig.json
+C:\Users\Aldrin\source\repos\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.dll
+C:\Users\Aldrin\source\repos\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.pdb
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.dll
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\refint\Calculator.dll
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.pdb
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.genruntimeconfig.cache
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\ref\Calculator.dll
+C:\Users\Aldrin\source\repos\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.Properties.Resources.resources
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.exe
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.deps.json
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.runtimeconfig.json
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.pdb
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.Form1.resources
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.Properties.Resources.resources
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.csproj.GenerateResource.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.AssemblyInfoInputs.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.AssemblyInfo.cs
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.sourcelink.json
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\refint\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.pdb
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.genruntimeconfig.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\calculatorCSharp\Calculator\Calculator\obj\Debug\net8.0-windows\ref\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.exe
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.deps.json
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.runtimeconfig.json
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.pdb
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.Form1.resources
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.Properties.Resources.resources
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.csproj.GenerateResource.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.AssemblyInfoInputs.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.AssemblyInfo.cs
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\refint\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.pdb
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.genruntimeconfig.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\Calculator\Calculator\obj\Debug\net8.0-windows\ref\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.exe
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.deps.json
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.runtimeconfig.json
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\bin\Debug\net8.0-windows\Calculator.pdb
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.Form1.resources
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.Properties.Resources.resources
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.csproj.GenerateResource.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.AssemblyInfoInputs.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.AssemblyInfo.cs
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\refint\Calculator.dll
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.pdb
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.genruntimeconfig.cache
+C:\Users\Aldrin\Desktop\3rd Year\1ST SEM\CS345\C# Calculator\Calculator\obj\Debug\net8.0-windows\ref\Calculator.dll
