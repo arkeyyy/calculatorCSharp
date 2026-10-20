@@ -6,7 +6,17 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <AssemblyTitle>Calculator</AssemblyTitle>
+    <Product>Calculator</Product>
+    <ApplicationIcon>Assets\Calculator.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Calculator.Core/Calculator.Core.csproj" />
+    <EmbeddedResource Include="Assets\Calculator.ico" />
+    <None Update="Assets\DependencyNotices.txt" Link="DependencyNotices.txt" TargetPath="DependencyNotices.txt" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

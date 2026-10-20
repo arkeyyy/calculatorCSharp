@@ -1,0 +1,13 @@
+Calculator dependency notices
+
+PeterO.Numbers 1.8.2
+Author: Peter Occil
+License: CC0-1.0
+Project: https://github.com/peteroupc/Numbers
+License: https://creativecommons.org/publicdomain/zero/1.0/
+
+The self-contained Windows distribution also includes the Microsoft .NET
+runtime. Its license and third-party notices accompany the runtime files.
+
+MSTest and FlaUI are used only by the verification projects and are not
+included in the Calculator application.
