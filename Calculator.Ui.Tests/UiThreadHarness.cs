@@ -17,7 +17,7 @@ internal sealed class UiThreadHarness : IDisposable
     private Form? form;
     private Exception? failure;
 
-    public UiThreadHarness(Func<Form> create)
+    public UiThreadHarness(Func<Form> create, bool acquireForeground = true)
     {
         thread = new Thread(() =>
         {
@@ -37,6 +37,7 @@ internal sealed class UiThreadHarness : IDisposable
         thread.Start();
         if (!ready.Wait(TimeSpan.FromSeconds(15))) throw new TimeoutException("The test form did not open.");
         if (failure is not null) ExceptionDispatchInfo.Capture(failure).Throw();
+        if (!acquireForeground) return;
         // A native title-bar click gives SendInput a real foreground target. Merely calling
         // Activate can be refused by Windows when the test runner starts in the background.
         Point titleBar = Read(host =>
@@ -79,9 +80,14 @@ internal sealed class UiThreadHarness : IDisposable
 
     public void Click(string name) => Do(host =>
     {
-        Button button = Find<Button>(host, name);
+        ButtonBase button = Find<ButtonBase>(host, name);
         button.Focus();
-        button.PerformClick();
+        switch (button)
+        {
+            case Button command: command.PerformClick(); break;
+            case RadioButton choice: choice.PerformClick(); break;
+            default: throw new AssertFailedException($"Unsupported button type: {button.GetType().Name}");
+        }
     });
 
     public void Key(VirtualKeyShort key)
@@ -108,6 +114,9 @@ internal sealed class UiThreadHarness : IDisposable
         }
         Assert.Fail(message);
     }
+
+    public void WaitForNavigation() => WaitUntil(host => !((MainForm)host).NavigationTransition.IsRunning,
+        "Navigation did not finish its transition.");
 
     public static T Find<T>(Control root, string name) where T : Control =>
         ModeView.Descendants(root).OfType<T>().FirstOrDefault(control => control.Name == name)

@@ -4,9 +4,21 @@ The C# implementation uses .NET 8 Windows Forms and preserves all 18 mode identi
 
 ## Completed checks
 
+### Navigation slide update (2026-10-21)
+
+- Navigation now uses **202.5 logical pixels**, rounded after DPI scaling; History retains **270**. A single elapsed-time WinForms timer drives a **180 ms cubic ease-out** slide with distance-proportional reversals. Content keeps its final width inside a native clipping region.
+- Deterministic controller checks pass for cubic progress, rapid reversal continuity, proportional duration, completion, disposal, disabled animations, and unavailable animation preferences.
+- A native control check that does not acquire desktop foreground passes at **120 DPI**: minimum-width labels (including Weight and Mass and Date Calculation) fit, History width is unchanged, rows retain their widths through motion, resize preserves scrolling, closing selects the destination synchronously, and closing rows ignore commands.
+- Core suite: **136 passed**. The navigation change compiles in Release with warnings treated as errors. The portable x64 build passes isolated Standard and Graphing launch/clean-shutdown smoke checks.
+- Foreground-dependent verification is **incomplete** for this update. A fullscreen application prevented or interrupted test-window foreground access, causing setup and native-focus failures. The full UI suite and actual animation-frame review in both themes must be rerun on an idle desktop; the checks below describe the previously verified appearance baseline, not a full passing run of this navigation update.
+- New native tests cover all five close paths, typing while closing, tab exclusion, no focus movement on completion, reopening, scroll retention, reduced motion, timer completion, and disposal during a transition. Existing navigation screenshots and visibility assertions now wait for completion; intermediate-frame tests use an injected clock rather than timing-sensitive sleeps.
+- DPI relayout retains normalized animation progress and restores the navigation scroll offset in logical pixels. Actual cross-monitor DPI changes and 96/144 DPI desktop runs remain unverified.
+
+### Previously verified appearance baseline
+
 - Release compilation with warnings treated as errors: **0 warnings, 0 errors**.
 - Core tests: **136 passed**, none skipped.
-- Native UI tests: **41 passed**, none skipped, at **120 DPI / 125% display scale**.
+- Native UI tests: **54 passed**, none skipped, at **120 DPI / 125% display scale**.
 - Self-contained Windows x64 package: Standard launched at **400×600 logical pixels**, saved Graphing launched at **800×640**, and both closed with exit code **0**. The smoke check left the normal settings profile unchanged.
 - Rendered layout checks cover minimum, default, large, maximized, and restored windows; the converter breakpoint is measured using actual workspace width.
 - Scientific and Programmer tests select commands through native popup keyboard navigation, then send digits, Backspace, Enter, Copy, and Paste through the current focus owner. The tests do not restore focus after the command under test.
@@ -14,9 +26,12 @@ The C# implementation uses .NET 8 Windows Forms and preserves all 18 mode identi
 - Graph tests cover expression selection, six-row limits, row removal, the visible keypad, native function menus, trace/ranges, pan/zoom shortcuts, scrolling, cancellation, and stale result rejection.
 - Date tests exercise the native calendar and extended ISO dates. Programmer tests cover disabled digits, word sizes, pending-expression feedback, and editing a scrolled bit.
 - Both themes and all six accents are checked. Settings content and all accent choices remain reachable at minimum size.
+- Settings cards are checked at minimum, default, and large sizes, including measured labels, native radio-button keyboard navigation, immediate persistence, independently expandable help sections, focus restoration on collapse, and scroll retention through theme changes and resizing.
+- Header icons remain centered within one physical pixel through actual native hover and pressed states. Keyboard activation, UI Automation Invoke, accessible pressed states, and accent-button text contrast are verified; normal, hover, and pressed primary text maintain at least **4.5:1** contrast in both themes.
+- Navigation selection includes Settings. Drawer scrolling survives resizing while keyboard navigation still reveals newly focused items. History rows reflow, recall results, and display the empty state immediately after clearing.
 - Source, metadata, scripts, and documentation scan: no remaining surname references or unfinished implementation markers.
 
-The native test harness uses a separate STA message loop for each fixture and consistent DPI awareness for native mouse coordinates. This prevents test setup from clicking a caption button or retaining popup state across fixtures.
+The native test harness uses a separate STA message loop for each fixture and consistent DPI awareness for native mouse coordinates. This prevents test setup from clicking a caption button or retaining popup state across fixtures. Drawer screenshots capture the actual desktop because `DrawToBitmap` reverses overlapping native child-window order; isolated control and layout screenshots use rendered bitmaps.
 
 ## Artifacts and reproduction
 

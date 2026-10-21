@@ -95,13 +95,14 @@ internal sealed class ShellFixture : IDisposable
     public SessionStore Session { get; } = new();
     public SettingsStore Settings { get; }
 
-    public ShellFixture(ModeId mode, string theme = "light", string accent = "BLUE", ICurrencyRateProvider? currencyRateProvider = null)
+    public ShellFixture(ModeId mode, string theme = "light", string accent = "BLUE", ICurrencyRateProvider? currencyRateProvider = null,
+        Func<double>? animationClock = null, Func<bool?>? animationsEnabled = null)
     {
         Settings = new SettingsStore(directory, importLegacy: false);
         Settings.Put("mode", mode.ToString());
         Settings.Put("theme", theme);
         Settings.Put("accent", accent);
-        Ui = new UiThreadHarness(() => new MainForm(Settings, Session, currencyRateProvider));
+        Ui = new UiThreadHarness(() => new MainForm(Settings, Session, currencyRateProvider, animationClock, animationsEnabled));
     }
 
     public void Select(ModeId mode) => Ui.Do(host => ((MainForm)host).SelectMode(mode));

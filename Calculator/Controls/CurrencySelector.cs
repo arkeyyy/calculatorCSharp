@@ -3,7 +3,7 @@ using Calculator.Core;
 namespace Calculator.Controls;
 
 /// <summary>A native list popup with independent highlighted and committed values.</summary>
-public sealed class CurrencySelector : Button
+public sealed class CurrencySelector : StyledButton
 {
     private readonly ToolStripDropDown popup = new() { AutoClose = true, Padding = new Padding(1), Margin = Padding.Empty };
     private readonly ListBox list = new() { BorderStyle = BorderStyle.None, IntegralHeight = false, Font = Ui.Font(12), DrawMode = DrawMode.OwnerDrawFixed };

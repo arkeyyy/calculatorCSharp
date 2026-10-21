@@ -81,7 +81,7 @@ public sealed class ModeLayoutTests
         foreach (string theme in new[] { "light", "dark" })
             shell.Ui.Do(host =>
             {
-                UiThreadHarness.Find<ComboBox>(host, "settings-theme").SelectedIndex = theme == "dark" ? 1 : 0;
+                UiThreadHarness.Find<RadioButton>(host, "settings-theme-" + theme).PerformClick();
                 Capture(host, $"settings-{theme}");
             });
     }
@@ -209,9 +209,10 @@ public sealed class ModeLayoutTests
         {
             shell.Ui.Click("navigation-toggle");
             shell.Ui.Click("navigation-settings");
+            shell.Ui.WaitForNavigation();
             shell.Ui.Do(host =>
             {
-                UiThreadHarness.Find<ComboBox>(host, "settings-theme").SelectedIndex = theme == "dark" ? 1 : 0;
+                UiThreadHarness.Find<RadioButton>(host, "settings-theme-" + theme).PerformClick();
                 Capture(host, $"settings-{theme}");
             });
             foreach (string accent in ThemePalette.AccentNames)
@@ -234,11 +235,14 @@ public sealed class ModeLayoutTests
         shell.Ui.Do(host => host.Size = host.MinimumSize);
         shell.Ui.Click("navigation-toggle");
         shell.Ui.Click("navigation-settings");
+        shell.Ui.WaitForNavigation();
         shell.Ui.Do(host =>
         {
             var settings = (SettingsView)((MainForm)host).ActiveMode!;
+            UiThreadHarness.Find<SettingsSection>(settings,"settings-shortcuts").Expanded = true;
+            UiThreadHarness.Find<SettingsSection>(settings,"settings-about").Expanded = true;
             Assert.IsTrue(settings.VerticalScroll.Visible);
-            var accents=UiThreadHarness.Find<FlowLayoutPanel>(settings,"settings-accents");
+            var accents=UiThreadHarness.Find<Panel>(settings,"settings-accents");
             Assert.AreEqual(6,accents.Controls.Count);
             foreach(Control button in accents.Controls)
                 Assert.IsTrue(accents.ClientRectangle.Contains(button.Bounds),"Every accent must fit within the scrolling content.");
@@ -249,7 +253,7 @@ public sealed class ModeLayoutTests
             var content = UiThreadHarness.Find<Panel>(settings, "settings-content");
             Assert.AreEqual(offset, settings.AutoScrollPosition.Y, "Layout must not reset the native scroll offset.");
             Assert.AreEqual(offset, content.Top, "Settings content must move with the scroll viewport.");
-            Label about = ModeView.Descendants(settings).OfType<Label>().Single(label => label.Text.StartsWith("Calculator\n", StringComparison.Ordinal));
+            Label about = UiThreadHarness.Find<Label>(settings,"settings-about-storage");
             Assert.IsTrue(settings.RectangleToScreen(settings.ClientRectangle).Contains(about.RectangleToScreen(about.ClientRectangle)), "The final settings text must be reachable by scrolling.");
             Capture(host, "settings-scrolled");
         });

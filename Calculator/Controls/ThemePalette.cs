@@ -21,13 +21,13 @@ public sealed record ThemePalette(bool IsDark, Color Background, Color Surface, 
             ColorTranslator.FromHtml(dark ? "#555560" : "#CDD1DE"),
             ColorTranslator.FromHtml(dark ? "#FFB0B0" : "#A82132"));
     }
-    private static Color Blend(Color a, Color b, double t) => Color.FromArgb(
+    public static Color Blend(Color a, Color b, double t) => Color.FromArgb(
         (int)(a.R * (1-t) + b.R*t), (int)(a.G*(1-t)+b.G*t), (int)(a.B*(1-t)+b.B*t));
-    private static Color ContrastInk(Color c)
+    public static Color ContrastInk(Color c)
     {
         static double Linear(byte v) { double d = v/255d; return d <= .04045 ? d/12.92 : Math.Pow((d+.055)/1.055,2.4); }
         double l = .2126*Linear(c.R)+.7152*Linear(c.G)+.0722*Linear(c.B);
-        return (l+.05)/.05 > 1.05/(l+.05) ? Color.FromArgb(20,22,30) : Color.White;
+        return (l+.05)/.05 > 1.05/(l+.05) ? Color.Black : Color.White;
     }
     public void Apply(Control root)
     {
@@ -45,6 +45,7 @@ public sealed record ThemePalette(bool IsDark, Color Background, Color Surface, 
         if (root.Tag as string == "muted") root.ForeColor = Muted;
         if (root.Tag as string == "error") root.ForeColor = Error;
         if (root.Tag as string == "primary") { root.BackColor = Accent; root.ForeColor = AccentText; }
+        if (root is IThemedControl themed) themed.ApplyPalette(this);
     }
 }
 

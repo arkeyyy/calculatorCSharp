@@ -11,7 +11,7 @@ public static class Ui
     };
     public static Button Button(string text, Action click, string? name = null)
     {
-        var button = new Button { Text = text, Name = name ?? text, AccessibleName = text,
+        var button = new StyledButton { Text = text, Name = name ?? text, AccessibleName = text,
             Font = Font(14), FlatStyle = FlatStyle.Flat, UseVisualStyleBackColor = false,
             Margin = Padding.Empty, Cursor = Cursors.Hand };
         button.Click += (_, _) => click(); return button;

@@ -1,6 +1,6 @@
 namespace Calculator.Controls;
 
-public sealed class CommandMenu : Button
+public sealed class CommandMenu : StyledButton
 {
     private readonly ContextMenuStrip menu = new() { ShowImageMargin=false };
     private bool commandCommitted;

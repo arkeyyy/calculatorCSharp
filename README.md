@@ -61,7 +61,11 @@ The ordinary launch size is 400×600 logical pixels with a 320×500 minimum. Gra
 
 Converters use stacked controls below an actual workspace width of 640 logical pixels; wider workspaces use equal columns and expand through the available height. Other modes keep their workspace caps: Standard 520, Scientific/Programmer 640, Date 560, and Graphing 960.
 
-Settings provides Light/Dark themes and Blue, Purple, Pink, Teal, Yellow, and Coral accents. The app uses native controls and visible keyboard focus.
+Settings keeps Light/Dark choices and the six accent colors in an Appearance card. Keyboard shortcuts and About Calculator expand independently below it; their expansion state lasts for the current session. Preferences save immediately. The page adapts to narrow windows and keeps native scrolling and keyboard navigation.
+
+Shared buttons use subtle rounded edges and visible hover, pressed, disabled, and keyboard-focus states. Header icons are drawn around the center of their highlight. Navigation marks the selected mode or Settings page, and history gives expressions and results distinct visual emphasis.
+
+Navigation is 202.5 logical pixels wide (25% narrower), while History remains 270. The sidebar slides horizontally over 180 ms with cubic ease-out; rapid toggles reverse from the current position. Keyboard focus and calculator input switch immediately when closing. Windows' client-area animation preference is respected, with instant transitions when animations are disabled or the preference is unavailable.
 
 ## Saved data
 
